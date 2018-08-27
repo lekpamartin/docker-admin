@@ -1,19 +1,19 @@
 #!/bin/sh
 
+. ./docker-admin.conf
+
 if [ $# == 0 ]; then
-	docker ps -a
+	$DAEMON ps -a
 	exit 0
 fi
  
-#eval set -- "$OPTS"
-
 while true ; do
 	case "$1" in
 		a|start) 
-			docker ps
+			$DAEMON ps
 			exit 0;;
 		o|stop)
-                        docker ps -a | grep -v "Up "
+                        $DAEMON ps -a | grep -v "Up "
                         exit 0;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'.\n"
