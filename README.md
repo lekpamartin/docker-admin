@@ -1,2 +1,2 @@
-# docker-admin
-Admin CLI for docker
+# Presentation
+Simple BASH CLI for docker administration. 

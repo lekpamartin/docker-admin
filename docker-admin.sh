@@ -1,13 +1,13 @@
 #!/bin/sh
 
-PWD=`pwd`
+VERSION="0.1"
 
 . ./docker-admin.conf
 
 usage () {
 	echo -e "\nUsage:  docker-admin COMMAND \n\nCommands:"
 	cat function/*/init.txt 
-	echo ""
+	echo -e "\n docker-admin version $VERSION"
 	exit 1
 }
 
@@ -20,6 +20,11 @@ fi
 if [ $# == 0 -o "$1" == "-h" -o "$1" == "--help" ]; then 
 	usage
 fi 
+
+if [ "$1" == "-v" -o "$1" == "--version" ]; then
+        echo -e "\n\t docker-admin version $VERSION\n"
+	exit 0
+fi
 
 if [ ! -e "function/$1" ]; then
 	echo -e "\n[ERROR] Unknown command '$1'.\n"
