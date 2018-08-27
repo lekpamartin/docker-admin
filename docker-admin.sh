@@ -4,10 +4,10 @@ VERSION="0.1"
 
 . ./docker-admin.conf
 
-usage () {
+usage() {
 	echo -e "\nUsage:  docker-admin COMMAND \n\nCommands:"
 	cat function/*/init.txt 
-	echo -e "\n docker-admin version $VERSION"
+	echo -e "\n docker-admin version $VERSION\n"
 	exit 1
 }
 
@@ -32,5 +32,3 @@ if [ ! -e "function/$1" ]; then
 else
 	function/$1/init.sh ${@:2}
 fi
-
-exit 0

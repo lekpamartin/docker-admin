@@ -4,12 +4,15 @@
 
 usage () {
         echo -e "\n\tcompose|docker-compose : Install docker-compose \
+		\n\tmonitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom \
                 \n\tpath : Install docker-admin in your PATH"
 }
 
 
 if [ $# == 0 ]; then
-        $DAEMON image ls
+	echo -e "\n[WARNING] Provide an option. Options : "
+        usage
+	echo ""
         exit $?
 fi
 
@@ -32,6 +35,10 @@ while true ; do
 				echo ""
 				exit $(( $EXIT + $? ))
 			fi;;
+		monitoring)
+			cd config/monitoring
+			docker-compose up -d
+			exit $?;;
 		path)
 			ln -s `pwd`/docker-admin.sh /usr/bin/docker-admin
 			exit 0;;
