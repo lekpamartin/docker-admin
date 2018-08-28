@@ -1,6 +1,8 @@
 #!/bin/sh
 
-. ./docker-admin.conf
+CWD='.'
+
+. $CWD/docker-admin.conf
 
 if [ $# == 0 ]; then
 	$DAEMON ps -a

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. ./docker-admin.conf
+. $CWD/docker-admin.conf
 
 usage () {
         echo -e "\n\tcompose|docker-compose : Install docker-compose \
@@ -41,6 +41,7 @@ while true ; do
 			exit $?;;
 		path)
 			ln -s `pwd`/docker-admin.sh /usr/bin/docker-admin
+			sed -i "s,CWD='.',CWD='`pwd`',g" function/*/init.sh
 			exit 0;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
