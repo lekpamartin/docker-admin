@@ -1,5 +1,7 @@
 #!/bin/sh
 
+CWD='.'
+
 . $CWD/docker-admin.conf
 
 usage () {

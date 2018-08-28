@@ -2,7 +2,7 @@
 
 VERSION="0.1"
 
-CWD="."
+CWD='.'
 
 . $CWD/docker-admin.conf
 
