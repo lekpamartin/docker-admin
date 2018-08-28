@@ -1,6 +1,8 @@
 #!/bin/sh
 
-. ./docker-admin.conf
+CWD='/data/repo/lekpamartin/docker-admin'
+
+. $CWD/docker-admin.conf
 
 usage () {
 	echo -e "\n\tp|prune : Remove unused images \

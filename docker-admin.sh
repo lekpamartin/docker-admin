@@ -2,7 +2,7 @@
 
 VERSION="0.1"
 
-CWD='.'
+CWD='/data/repo/lekpamartin/docker-admin'
 
 . $CWD/docker-admin.conf
 
