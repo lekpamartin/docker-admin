@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CWD='/data/repo/lekpamartin/docker-admin'
+CWD='.'
 
 . $CWD/docker-admin.conf
 
@@ -43,7 +43,7 @@ while true ; do
 			exit $?;;
 		path)
 			ln -s `pwd`/docker-admin.sh /usr/bin/docker-admin
-			sed -i "s,CWD='/data/repo/lekpamartin/docker-admin',CWD='`pwd`',g" function/*/init.sh docker-admin.sh
+			sed -i "s,CWD='.',CWD='`pwd`',g" function/*/init.sh docker-admin.sh
 			exit 0;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "

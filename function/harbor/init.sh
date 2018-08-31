@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CWD='/data/repo/lekpamartin/docker-admin'
+CWD='/data/repo/docker-admin'
 
 . $CWD/docker-admin.conf
 
@@ -19,7 +19,7 @@ if [ $# == 0 ]; then
         exit $?
 fi
 
-if [ ! -e ${HARBOR_API_CACERT} ]; then
+if [ ! -e "${HARBOR_API_CACERT}" ]; then
 	CERT='-k'
 else
 	CERT="--cacert ${HARBOR_API_CACERT}"
@@ -37,7 +37,10 @@ while true ; do
 		get-projects)
 			exit $?;;
 		get-user-info)
-			${CURLAPI}/users/${2:-$HARBOR_API_USER}
+			${CURLAPI}/users/current
+			exit $?;;
+		get-user-list)
+			${CURLAPI}/users
 			exit $?;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
