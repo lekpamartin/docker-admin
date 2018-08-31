@@ -5,9 +5,10 @@ CWD='/data/repo/lekpamartin/docker-admin'
 . $CWD/docker-admin.conf
 
 usage () {
-        echo -e "\n\tcompose|docker-compose : Install docker-compose \
-		\n\tmonitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom \
-                \n\tpath : Install docker-admin in your PATH"
+        echo -e "\n\tget-images : print images details\
+		\n\tget-image-tags : print images tags details\
+		\n\tget-projects : print project's details\
+		\n\tget-user-info : print user info. without arg for configured user or with arg for a different user 'get-user-info user'"
 }
 
 
@@ -28,12 +29,12 @@ CURLAPI="curl -u ${HARBOR_API_USER}:${HARBOR_API_PASSWORD} -i ${CERT} ${HARBOR_A
 
 while true ; do
 	case "$1" in
-		get-projects)
-			exit $?;;
 		get-images)
 			exit $?;;
 		get-image-tags)
 			${CURLAPI}/repositories/$2/tags
+			exit $?;;
+		get-projects)
 			exit $?;;
 		get-user-info)
 			${CURLAPI}/users/${2:-$HARBOR_API_USER}
