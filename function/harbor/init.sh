@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CWD='/data/repo/docker-admin'
+CWD='.'
 
 . $CWD/docker-admin.conf
 

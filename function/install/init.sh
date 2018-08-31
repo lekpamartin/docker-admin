@@ -6,8 +6,8 @@ CWD='.'
 
 usage () {
         echo -e "\n\tcompose|docker-compose : Install docker-compose \
-		\n\tmonitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom \
-                \n\tpath : Install docker-admin in your PATH"
+		\n\n\tmonitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom \
+                \n\n\tpath : Install docker-admin in your PATH"
 }
 
 
@@ -38,7 +38,7 @@ while true ; do
 				exit $(( $EXIT + $? ))
 			fi;;
 		monitoring)
-			cd config/monitoring
+			cd $CWD/config/monitoring
 			docker-compose up -d
 			exit $?;;
 		path)

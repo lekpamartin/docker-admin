@@ -10,7 +10,7 @@ volumes:
 
 services:
 
-  prometheus:
+  monitoring_prometheus:
     image: prom/prometheus
     container_name: prometheus
     volumes:
@@ -31,7 +31,7 @@ services:
     labels:
       org.label-schema.group: "monitoring"
   
-  alertmanager:
+  monitoring_alertmanager:
     image: prom/alertmanager
     container_name: alertmanager
     volumes: 
@@ -47,7 +47,7 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
-  nodeexporter:
+  monitoring_nodeexporter:
     image: prom/node-exporter
     container_name: nodeexporter
     user: root
@@ -68,7 +68,7 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
-  cadvisor:
+  monitoring_cadvisor:
     image: google/cadvisor
     container_name: cadvisor
     volumes:
@@ -85,7 +85,7 @@ services:
     labels:
       org.label-schema.group: "monitoring"
   
-  grafana:
+  monitoring_grafana:
     image: grafana/grafana
     container_name: grafana
     volumes:
@@ -106,7 +106,7 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
-  pushgateway:
+  monitoring_pushgateway:
     image: prom/pushgateway
     container_name: pushgateway
     restart: unless-stopped
@@ -117,7 +117,7 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
-  caddy:
+  monitoring_caddy:
     image: stefanprodan/caddy
     container_name: caddy
     ports:
