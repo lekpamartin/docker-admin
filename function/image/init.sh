@@ -27,7 +27,7 @@ while true ; do
                         $DAEMON push $2
                         exit $?;;
 		r|rm)
-                        $DAEMON image rm $2
+                        $DAEMON image rm ${@:2}
                         exit $?;;
 		a|tag)
                         $DAEMON image tag $2 $3
