@@ -1,5 +1,6 @@
 #!/bin/sh
 
+PROGRAMNAME='docker-admin'
 VERSION="0.1"
 
 CWD='.'

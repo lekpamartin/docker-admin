@@ -39,12 +39,14 @@ while true ; do
 			fi;;
 		monitoring)
 			cd $CWD/config/monitoring
-			docker-compose up -d
+			ADMIN_USER=${MONITORING_USER} ADMIN_PASSWORD=${MONITORING_PASSWORD} docker-compose up -d
 			exit $?;;
 		path)
 			ln -s `pwd`/docker-admin.sh /usr/bin/docker-admin
 			sed -i "s,CWD='.',CWD='`pwd`',g" function/*/init.sh docker-admin.sh
-			exit 0;;
+			EXIT=$?
+			echo -e "\n\t $PROGRAMNAME is now installed in your PATH don't move file"
+			exit $EXIT;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage
