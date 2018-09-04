@@ -8,6 +8,7 @@ Commands:
 ## 	harbor
 Harbor's registry management
 
+Arguments: 
 	get-images : print images details		
 
 	get-image-package-vulnerability-fixed: print informations about update available for vulnerable package		
@@ -20,12 +21,14 @@ Harbor's registry management
 ## 	image
 Mange images
 
+Arguments: 
 	p|prune : Remove unused images 		
 	l|pull : Pull an image or a repository from a registry 		
 	s|push : Push an image or a repository to a registry
 ## 	install
 Install docker-admin in PATH, monitoring, ...
 
+Arguments: 
 	compose|docker-compose : Install docker-compose 		
 
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
@@ -33,6 +36,7 @@ Install docker-admin in PATH, monitoring, ...
 	path : Install docker-admin in your PATH
 ## 	list		List all available container
 
+Arguments: 
 	compose|docker-compose : Install docker-compose 		
 
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
@@ -40,6 +44,7 @@ Install docker-admin in PATH, monitoring, ...
 	path : Install docker-admin in your PATH
 ## 	uninstall	Uninstall docker-admin in PATH, monitoring, ...
 
+Arguments: 
 	compose|docker-compose : Install docker-compose 		
 
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
@@ -47,6 +52,7 @@ Install docker-admin in PATH, monitoring, ...
 	path : Install docker-admin in your PATH
 ## 	volume		Manage volumes
 
+Arguments: 
 	c|create : Create a volume 		
 	i|inspect : Display detailed information on one or more volumes 		
 	p|prune : Remove unused volumes 		
