@@ -1,2 +1,2 @@
 
-	volume		Manage volumes
+	volume: Manage volumes

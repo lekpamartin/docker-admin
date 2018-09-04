@@ -30,7 +30,7 @@ Arguments:
 	l|pull : Pull an image or a repository from a registry 		
 	s|push : Push an image or a repository to a registry
 ## 	install
-Install docker-admin in PATH, monitoring, ...
+Install monitoring, docker-admin in your PATH, ...
 
 
 Arguments: 
@@ -40,7 +40,8 @@ Arguments:
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
 
 	path : Install docker-admin in your PATH
-## 	list		List all available container
+## 	list
+List all available container
 
 
 Arguments: 
@@ -50,7 +51,8 @@ Arguments:
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
 
 	path : Install docker-admin in your PATH
-## 	uninstall	Uninstall docker-admin in PATH, monitoring, ...
+## 	uninstall
+Uninstall docker-admin in PATH, monitoring, ...
 
 
 Arguments: 
@@ -60,7 +62,8 @@ Arguments:
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
 
 	path : Install docker-admin in your PATH
-## 	volume		Manage volumes
+## 	volume
+Manage volumes
 
 
 Arguments: 

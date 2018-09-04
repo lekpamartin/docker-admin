@@ -1,2 +1,2 @@
 
-	list		List all available container
+	list: List all available container
