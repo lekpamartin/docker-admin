@@ -1,6 +1,6 @@
 
 	harbor		Harbor's registry management
 
-	docker-admin harbor ARGUMENTS
+\tdocker-admin harbor ARGUMENTS
 
 Arguments :
