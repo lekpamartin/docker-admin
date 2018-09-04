@@ -8,7 +8,7 @@ Commands:
 
 	harbor		Harbor's registry management
 
-	docker-admin harbor ARGUMENTS
+		docker-admin harbor ARGUMENTS
 
 Arguments :
 
