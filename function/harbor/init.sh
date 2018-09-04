@@ -25,7 +25,7 @@ else
 	CERT="--cacert ${HARBOR_API_CACERT}"
 fi 
 
-CURLAPI="curl -u ${HARBOR_API_USER}:${HARBOR_API_PASSWORD} -i ${CERT} ${HARBOR_API_URL}"
+CURLAPI="curl -s -u ${HARBOR_API_USER}:${HARBOR_API_PASSWORD} ${CERT} ${HARBOR_API_URL}"
 
 while true ; do
 	case "$1" in
@@ -35,12 +35,12 @@ while true ; do
 			JSON="["
 			for i in $HARBOR_PROJECT_ID; do
 				REPO=""
-				OUTPUT_REPO=`$CURLAPI/repositories/?project_id=$i | jq -r '.[] | {name: .name  } | .name'`
+				OUTPUT_REPO=`$CURLAPI/repositories/?project_id=$i | jq -r '.[] | .name'`
 				REPO="$REPO $OUTPUT_REPO"
 
 				for j in $REPO; do
 					TAGS=""
-					OUTPUT_TAGS=`$CURLAPI/repositories/$j/tags | jq -r '.[] | {name: .name  } | .name'`
+					OUTPUT_TAGS=`$CURLAPI/repositories/$j/tags | jq -r '.[] | .name'`
 					TAGS="$TAGS $OUTPUT_TAGS"
 
 						for k in $TAGS; do
