@@ -5,8 +5,7 @@ Simple BASH CLI for docker administration.
 <code>docker-admin COMMAND </code>
 
 Commands:
-# 
-	harbor: Harbor's registry management
+# 	harbor: Harbor's registry management
 	docker-admin harbor ARGUMENTS
 
 Arguments:
@@ -22,8 +21,7 @@ Arguments:
 	get-user-info : print user info. without arg for configured user or with arg for a different user 'get-user-info user'
 
 
-# 
-	image: Mange images
+# 	image: Mange images
 	docker-admin image ARGUMENTS
 
 Arguments:
@@ -33,8 +31,7 @@ Arguments:
 	s|push : Push an image or a repository to a registry
 
 
-# 
-	install: Install docker-admin in PATH, monitoring, ...
+# 	install: Install docker-admin in PATH, monitoring, ...
 	docker-admin install ARGUMENTS
 
 Arguments:
@@ -46,8 +43,7 @@ Arguments:
 	path : Install docker-admin in your PATH
 
 
-# 
-	list		List all available container
+# 	list		List all available container
 	docker-admin list ARGUMENTS
 
 Arguments:
@@ -59,8 +55,7 @@ Arguments:
 	path : Install docker-admin in your PATH
 
 
-# 
-	uninstall	Uninstall docker-admin in PATH, monitoring, ...
+# 	uninstall	Uninstall docker-admin in PATH, monitoring, ...
 	docker-admin uninstall ARGUMENTS
 
 Arguments:
@@ -72,8 +67,7 @@ Arguments:
 	path : Install docker-admin in your PATH
 
 
-# 
-	volume		Manage volumes
+# 	volume		Manage volumes
 	docker-admin volume ARGUMENTS
 
 Arguments:
