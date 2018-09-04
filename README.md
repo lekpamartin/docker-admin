@@ -6,9 +6,9 @@ Simple BASH CLI for docker administration.
 
 Commands:
 
-	# harbor		Harbor's registry management
+	harbor		Harbor's registry management
 
-\tdocker-admin harbor ARGUMENTS
+	docker-admin harbor ARGUMENTS
 
 Arguments :
 
