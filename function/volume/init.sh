@@ -31,7 +31,8 @@ while true ; do
                         $DAEMON volume rm $2
                         exit $?;;
 		usage)
-			usage;;
+			usage
+			break;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage

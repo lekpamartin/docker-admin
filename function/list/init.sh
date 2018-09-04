@@ -18,7 +18,8 @@ while true ; do
                         $DAEMON ps -a | grep -v "Up "
                         exit $?;;
 		usage)
-			usage;;
+			usage
+			break;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'.\n"
 			#usage

@@ -73,7 +73,8 @@ while true ; do
 			exit $?;;
 
 		usage)
-			usage;;
+			usage
+			break;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage
@@ -81,5 +82,3 @@ while true ; do
 			exit 2;;
 	esac
 done
- 
-exit 0

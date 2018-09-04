@@ -48,7 +48,8 @@ while true ; do
 			echo -e "\n\t $PROGRAMNAME is now installed in your PATH don't move files\n"
 			exit $EXIT;;
 		usage)
-			usage;;
+			usage
+			break;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage
@@ -56,5 +57,3 @@ while true ; do
 			exit 2;;
 	esac
 done
- 
-exit 0

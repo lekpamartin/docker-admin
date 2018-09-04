@@ -38,7 +38,8 @@ while true ; do
 			rm -f /usr/bin/docker-admin
 			exit 0;;
 		usage)
-			usage;;
+			usage
+			break;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage
@@ -46,5 +47,3 @@ while true ; do
 			exit 2;;
 	esac
 done
- 
-exit 0
