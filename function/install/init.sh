@@ -45,7 +45,7 @@ while true ; do
 			ln -s `pwd`/docker-admin.sh /usr/bin/docker-admin
 			sed -i "s,CWD='.',CWD='`pwd`',g" function/*/init.sh docker-admin.sh
 			EXIT=$?
-			echo -e "\n\t $PROGRAMNAME is now installed in your PATH don't move file"
+			echo -e "\n\t $PROGRAMNAME is now installed in your PATH don't move files\n"
 			exit $EXIT;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
