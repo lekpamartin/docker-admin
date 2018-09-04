@@ -1,6 +1,9 @@
 # Presentation
 Simple BASH CLI for docker administration.
 
+Don't forget to edit configuration file
+	docker-admin.conf
+
 # Usage
 <code>docker-admin COMMAND ARGUMENTS</code>
 
