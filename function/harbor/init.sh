@@ -6,9 +6,10 @@ CWD='.'
 
 usage () {
         echo -e "\n\tget-images : print images details\
-		\n\tget-image-tags : print images tags details\
-		\n\tget-projects : print project's details\
-		\n\tget-user-info : print user info. without arg for configured user or with arg for a different user 'get-user-info user'"
+		\n\n\tget-image-package-vulnerability-fixed: print informations about update available for vulnerable package\
+		\n\n\tget-image-tags : print images tags details\
+		\n\n\tget-projects : print project's details\
+		\n\n\tget-user-info : print user info. without arg for configured user or with arg for a different user 'get-user-info user'"
 }
 
 
@@ -31,7 +32,7 @@ while true ; do
 	case "$1" in
 		get-images)
 			exit $?;;
-		get-image-status)
+		get-image-package-vulnerability-fixed)
 			JSON="["
 			for i in $HARBOR_PROJECT_ID; do
 				REPO=""
