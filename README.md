@@ -2,14 +2,11 @@
 Simple BASH CLI for docker administration.
 
 # Usage
-<code>docker-admin COMMAND </code>
+<code>docker-admin COMMAND ARGUMENTS</code>
 
 Commands:
-## 	harbor: Harbor's registry management
-	docker-admin harbor ARGUMENTS
-
-Arguments:
-
+## 	harbor
+Harbor's registry management
 	get-images : print images details		
 
 	get-image-package-vulnerability-fixed: print informations about update available for vulnerable package		
@@ -21,21 +18,15 @@ Arguments:
 	get-user-info : print user info. without arg for configured user or with arg for a different user 'get-user-info user'
 
 
-## 	image: Mange images
-	docker-admin image ARGUMENTS
-
-Arguments:
-
+## 	image
+Mange images
 	p|prune : Remove unused images 		
 	l|pull : Pull an image or a repository from a registry 		
 	s|push : Push an image or a repository to a registry
 
 
-## 	install: Install docker-admin in PATH, monitoring, ...
-	docker-admin install ARGUMENTS
-
-Arguments:
-
+## 	install
+Install docker-admin in PATH, monitoring, ...
 	compose|docker-compose : Install docker-compose 		
 
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
@@ -44,10 +35,6 @@ Arguments:
 
 
 ## 	list		List all available container
-	docker-admin list ARGUMENTS
-
-Arguments:
-
 	compose|docker-compose : Install docker-compose 		
 
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
@@ -56,10 +43,6 @@ Arguments:
 
 
 ## 	uninstall	Uninstall docker-admin in PATH, monitoring, ...
-	docker-admin uninstall ARGUMENTS
-
-Arguments:
-
 	compose|docker-compose : Install docker-compose 		
 
 	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
@@ -68,10 +51,6 @@ Arguments:
 
 
 ## 	volume		Manage volumes
-	docker-admin volume ARGUMENTS
-
-Arguments:
-
 	c|create : Create a volume 		
 	i|inspect : Display detailed information on one or more volumes 		
 	p|prune : Remove unused volumes 		
