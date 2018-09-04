@@ -1,5 +1,5 @@
 
-	harbor		Harbor's registry management
+	# harbor		Harbor's registry management
 
 \tdocker-admin harbor ARGUMENTS
 
