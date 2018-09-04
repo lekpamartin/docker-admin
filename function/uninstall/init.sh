@@ -37,6 +37,8 @@ while true ; do
 		path)
 			rm -f /usr/bin/docker-admin
 			exit 0;;
+		usage)
+			usage;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage

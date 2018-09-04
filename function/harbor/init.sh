@@ -72,6 +72,8 @@ while true ; do
 			${CURLAPI}/users
 			exit $?;;
 
+		usage)
+			usage;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage

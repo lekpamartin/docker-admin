@@ -32,6 +32,8 @@ while true ; do
 		a|tag)
                         $DAEMON image tag $2 $3
                         exit $?;;
+		usage)
+			usage;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage

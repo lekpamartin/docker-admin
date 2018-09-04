@@ -47,6 +47,8 @@ while true ; do
 			EXIT=$?
 			echo -e "\n\t $PROGRAMNAME is now installed in your PATH don't move files\n"
 			exit $EXIT;;
+		usage)
+			usage;;
 		*)
 			echo -e "\n[ERROR] Unknown option '$1'. Options : "
 			usage
