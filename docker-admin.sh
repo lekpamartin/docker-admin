@@ -8,7 +8,7 @@ CWD='.'
 
 usage() {
 	echo -e "\nUsage:  docker-admin COMMAND \n\nCommands:"
-	cat $CWD/function/*/init.txt 
+	cat $CWD/function/*/README.md
 	echo -e "\n docker-admin version $VERSION\n"
 	exit 1
 }
