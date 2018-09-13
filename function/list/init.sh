@@ -5,8 +5,7 @@ CWD='.'
 . $CWD/docker-admin.conf
 
 usage () {
-	echo -e "\n\ta|start : Start container \
-		\n\n\to|stop : Stop container "
+	echo -e "\n\n\t <without argument> : list container"
 }
 
 if [ $# == 0 ]; then

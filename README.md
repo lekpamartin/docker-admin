@@ -50,9 +50,8 @@ List all available container
 
 Arguments: 
 
-	a|start : Start container 		
 
-	o|stop : Stop container 
+	 <without argument> : list container
 ## 	uninstall
 Uninstall docker-admin in PATH, monitoring, ...
 
