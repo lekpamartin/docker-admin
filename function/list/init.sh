@@ -4,6 +4,11 @@ CWD='.'
 
 . $CWD/docker-admin.conf
 
+usage () {
+	echo -e "\n\ta|start : Start container \
+		\n\n\to|stop : Stop container "
+}
+
 if [ $# == 0 ]; then
 	$DAEMON ps -a
 	exit $?

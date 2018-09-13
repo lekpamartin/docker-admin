@@ -50,11 +50,9 @@ List all available container
 
 Arguments: 
 
-	compose|docker-compose : Install docker-compose 		
+	a|start : Start container 		
 
-	monitoring : Install monitoring tools for docker. Base on https://github.com/stefanprodan/dockprom                 
-
-	path : Install docker-admin in your PATH
+	o|stop : Stop container 
 ## 	uninstall
 Uninstall docker-admin in PATH, monitoring, ...
 
